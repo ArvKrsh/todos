@@ -117,7 +117,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px 10px;
+  padding-bottom: 50px;
 }
 label {
   margin-left: 15px;
