@@ -32,7 +32,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      title: "Todos",
+      title: "My Tasks",
       todos: []
     };
   },
@@ -47,6 +47,7 @@ export default {
       localStorage.setItem('todos', JSON.stringify(this.todos))
     },
     addNewTodo() {
+      if(document.getElementById('new-todo').value.trim() == '') {return}
       let todo = { 
         id : Math.floor(Date.now() * Math.random()),
         todo_name : document.getElementById('new-todo').value,
@@ -116,6 +117,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 30px 10px;
 }
 label {
   margin-left: 15px;
